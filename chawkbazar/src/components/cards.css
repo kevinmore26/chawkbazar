@@ -1,0 +1,19 @@
+.container1 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1em 1em;
+  grid-template-areas: "primero primero primero segundo tercero";
+  height: 180px !important;
+}
+
+.primero {
+  grid-area: primero;
+}
+.segundo {
+  grid-area: segundo;
+}
+.tercero {
+  grid-area: tercero;
+}
