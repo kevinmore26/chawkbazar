@@ -1,19 +1,73 @@
-.container1 {
+.containergrid {
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1em 1em;
-  grid-template-areas: "primero primero primero segundo tercero";
-  height: 180px !important;
+  grid-template-areas:
+    "primero primero primero primero primero segundo segundo tercero tercero"
+    "cuarto cuarto quinto quinto sexto sexto sexto sexto sexto";
+  height: 450px;
+  max-width: 1920px;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .containergrid { 
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em 1em;
+    grid-template-areas:
+      "primero primero"
+      "segundo tercero"
+      "cuarto quinto"
+      "sexto sexto";
+    height: 750px;
+    height: 1200px;
+  }
 }
 
 .primero {
   grid-area: primero;
 }
+
 .segundo {
   grid-area: segundo;
 }
+
 .tercero {
   grid-area: tercero;
+}
+
+.cuarto {
+  grid-area: cuarto;
+}
+
+.quinto {
+  grid-area: quinto;
+}
+
+.sexto {
+  grid-area: sexto;
+}
+
+.containergrid:nth-child(1) {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /*mascara de photosop */
+}
+
+.containergrid:nth-child(2) img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /*mascara de photosop */
+}
+
+.containergrid:nth-child(3) img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /*mascara de photosop */
 }
